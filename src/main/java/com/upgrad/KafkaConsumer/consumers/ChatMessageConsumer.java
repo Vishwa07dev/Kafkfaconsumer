@@ -21,7 +21,7 @@ public class ChatMessageConsumer {
     props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
     props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
     KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
-    consumer.subscribe(Arrays.asList("chat-topic"));
+    consumer.subscribe(Arrays.asList("test"));
 
     //Prints the topic subscription list
     Set<String> subscribedTopics = consumer.subscription();
